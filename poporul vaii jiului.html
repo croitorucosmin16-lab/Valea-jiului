@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏛️ Forum Politic — Valea Jiului: Justiție, Minerit, Viitor</title>
+    <title>🏛️ Forum Politic — Ciobanu Alexandru & Viitorul Valea Jiului</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -339,6 +339,56 @@
             line-height: 1.7;
         }
 
+        /* Articol Ciobanu Alexandru */
+        .ciobanu-section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #fff;
+            border-left: 6px solid #27ae60;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+        .ciobanu-title {
+            font-size: 1.5em;
+            color: #27ae60;
+            margin: 0 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ciobanu-title::before {
+            content: "⚖️";
+            font-size: 1.3em;
+        }
+        .ciobanu-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .ciobanu-content {
+            line-height: 1.7;
+        }
+
+        /* Fundal Justitie */
+        .justice-bg {
+            background: url('https://images.unsplash.com/photo-1589758094783-6a235e92068d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+        .justice-bg h3 {
+            color: white;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
         /* Responsiv */
         @media (max-width: 768px) {
             .container {
@@ -367,7 +417,7 @@
             <div class="logo">
                 <img src="https://cdn-icons-png.flaticon.com/512/2963/2963875.png" alt="Logo">
             </div>
-            <h1>🏛️ Forum Politic — Valea Jiului</h1>
+            <h1>🏛️ Forum Politic — Ciobanu Alexandru & Viitorul Valea Jiului</h1>
             <p>Justiție. Minerit. Viitor. Vocea ta contează.</p>
         </header>
 
@@ -407,32 +457,49 @@
             </div>
         </div>
 
-        <!-- NOU: Secțiune Valea Jiului -->
-        <div class="valley-section">
-            <h2 class="valley-title">⛏️ Valea Jiului — Din „Gaura Neagră” în Centru de Dezvoltare</h2>
-            <div class="valley-content">
-                <p><strong>Actualitate 2025:</strong> Valea Jiului rămâne una dintre cele mai afectate zone din România — dar și una cu potențial uriaș. Minierii au fost lăsați pe dinafară, iar orașele se golesc. Ce putem face?</p>
+        <!-- NOU: Articol Ciobanu Alexandru -->
+        <div class="ciobanu-section">
+            <h2 class="ciobanu-title">⚖️ Ciobanu Alexandru — Avocat, Tânăr, Viitor Primar al Vulcanului</h2>
+            <div class="ciobanu-content">
+                <p><strong>Ciobanu Alexandru</strong> este unul dintre cei mai promițători tineri din Valea Jiului — avocat, cu o carieră construită pe principii de justiție, integritate și respect pentru lege.</p>
 
-                <img src="https://images.unsplash.com/photo-1589758094783-6a235e92068d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Valea Jiului" class="valley-image">
+                <img src="https://via.placeholder.com/800x400?text=Ciobanu+Alexandru+-+Viitor+Primar+Vulcan" alt="Ciobanu Alexandru" class="ciobanu-image">
 
-                <h3>📌 Ce se întâmplă acum:</h3>
+                <h3>Caracter și Dorințe Puternice</h3>
+                <p>Alexandru a demonstrat încă de la început că nu se teme de bătălii politice — chiar dacă sunt grele. A dat dovadă de putere în politica locală, prin propuneri concrete, transparență și implicare directă în problemele comunității.</p>
+
+                <h3>Susținut și cu Șanse Reale</h3>
+                <p>Este susținut de o parte din populația locală, dar și de organizații civice care cred în schimbare. Are șanse reale să câștige alegerile — nu doar pentru că are idei, ci pentru că are curaj.</p>
+
+                <div class="justice-bg">
+                    <h3>⚖️ Fundal de Justiție — Procesul Politic Simbolic</h3>
+                    <p>Imaginea de fundal reprezintă un moment istoric — procesul care a dus la schimbarea unei conduceri corupte. Exact asta vrem și noi: ca justiția să prevaleze, iar cei care fură banii publici să fie dați jos.</p>
+                </div>
+
+                <div class="action-call">
+                    🔥 <strong>Acțiune imediată:</strong> Sprijină-l pe Ciobanu Alexandru — scrie o opinie în secțiunea „Justiție” sau „Economie” — și propune o soluție concretă pentru Vulcan!
+                </div>
+            </div>
+        </div>
+
+        <!-- NOU: Secțiune Tineretul din Valea Jiului -->
+        <div class="population-section">
+            <h2 class="population-title">👨‍👩‍👧‍👦 Tineretul din Valea Jiului — Obligat să Plece, Dar Doritor să Rămână</h2>
+            <div class="population-content">
+                <p><strong>Tinerii din Valea Jiului</strong> sunt forța viitoare — dar astăzi sunt obligați să plece pentru a se dezvolta în muncă. Nu pentru că nu vor să rămână — ci pentru că nu au locuri de muncă, nu au proiecte, nu au șanse.</p>
+
+                <p>👉 <strong>Dorința lor nu este aceasta.</strong> Ei vor să rămână — să construiască, să inoveze, să redea viață zonei.</p>
+
+                <h3>❓ Ce soluție am putea găsi?</h3>
                 <ul>
-                    <li>Proiectul de modernizare a drumurilor naționale este în întârziere</li>
-                    <li>Fonduri europene nerulate pentru reconversie economică</li>
-                    <li>Învățământul profesional este subfinanțat</li>
-                    <li>Tinerii pleacă — nu mai există locuri de muncă adecvate</li>
-                </ul>
-
-                <h3>💡 Ce putem face NOI:</h3>
-                <ul>
-                    <li>Creăm grupuri locale de inițiativă — pentru proiecte de turism, agricultură, educație tehnică</li>
-                    <li>Cerem transparență — unde sunt fondurile europene?</li>
-                    <li>Propunem reforme: taxe reduse pentru antreprenori locali, sprijin pentru tineri care rămân</li>
-                    <li>Construim un plan de dezvoltare locală — cu participarea cetățenilor</li>
+                    <li>Creăm proiecte locale de antreprenoriat — cu sprijin financiar și tehnic</li>
+                    <li>Construim centre de educație tehnică — legate de minerit, turism, IT</li>
+                    <li>Implicăm tinerii în deciziile locale — nu doar ca spectatorii, ci ca actori</li>
+                    <li>Dăm jos conducerea care nu se oprește din a fura banii publici — și o înlocuim cu cei tineri, care doresc să dea o șansă acestei zone</li>
                 </ul>
 
                 <div class="action-call">
-                    🔥 <strong>Acțiune imediată:</strong> Scrie o opinie în secțiunea „Economie” sau „Justiție” — și propune o soluție concretă pentru Valea Jiului!
+                    💪 <strong>Este timpul să ne unim — pentru un viitor comun, în care tinerii sunt la putere, nu la plecare.</strong>
                 </div>
             </div>
         </div>
@@ -461,10 +528,10 @@
             <div class="leader-card">
                 <img src="https://via.placeholder.com/80" alt="Candidat" class="leader-photo">
                 <div class="leader-info">
-                    <div class="leader-name">Andrei Drăgan</div>
+                    <div class="leader-name">Ciobanu Alexandru</div>
                     <div class="leader-role">Candidat la Primăria Vulcan</div>
-                    <div class="leader-contact">📧 andrei.dragan@vulcan.ro | 📞 0254-789012</div>
-                    <p>„Vrem să aducem înapoi minele — nu ca locuri de muncă, ci ca simboluri ale identității noastre.”</p>
+                    <div class="leader-contact">📧 alex.ciobanu@vulcan.ro | 📞 0254-789012</div>
+                    <p>„Vrem să aducem înapoi minele — nu ca locuri de muncă, ci ca simboluri ale identității noastre. Și să dăm putere tinerilor.”</p>
                 </div>
             </div>
         </div>
@@ -488,17 +555,6 @@
             <textarea id="proposal-text" placeholder="Scrie propunerea ta... (min. 100 de caractere)" rows="5" required></textarea>
             <button onclick="submitProposal()">Trimite Propunerea</button>
             <button onclick="hideProposalForm()" style="background: #95a5a6; margin-left: 10px;">Anulează</button>
-        </div>
-
-        <!-- NOU: Secțiune Populație -->
-        <div class="population-section">
-            <h2 class="population-title">👨‍👩‍👧‍👦 Populația Valea Jiului — Luptătoare și Modernă</h2>
-            <div class="population-content">
-                <p><strong>Pensionari</strong> — cei care au construit Valea Jiului, care au muncit în mine, care au rămas să păzească memoria locului.</p>
-                <p><strong>Tineri muncitori</strong> — cei care au rămas, care lucrează în construcții, agricultură, servicii — și care vreau un viitor.</p>
-                <p><strong>Minerii</strong> — cei care își doresc înapoi minele — nu ca locuri de muncă, ci ca simboluri ale identității lor, ale istoriei lor.</p>
-                <p>👉 <strong>Este timpul să ne unim — pentru un viitor comun, în care fiecare are un rol.</strong></p>
-            </div>
         </div>
 
         <!-- Formular pentru adăugare opinie -->
