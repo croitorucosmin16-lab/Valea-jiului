@@ -3,410 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏛️ Forum Politic — Ciobanu Alexandru & Viitorul Valea Jiului</title>
+    <title>Croitoru Cosmin — Portofoliu Profesional</title>
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --white: #fff;
+            --shadow: rgba(0,0,0,0.3);
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('https://images.unsplash.com/photo-1589758094783-6a235e92068d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background: url('https://imgs.search.brave.com/ZPCnqYETmLFm2nRGaF3Utqve3NOtfJ3qqvndqct4ytI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3RpL2dyYXRp/cy12ZWN0b3IvdDIv/MTMwMzczLWRhbWUt/dmFuLWp1c3RpdGll/LXZlY3Rvci5qcGc') no-repeat center center fixed;
             background-size: cover;
-            color: #333;
+            color: var(--white);
             line-height: 1.6;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-            border-radius: 12px;
-            border: 2px solid #2c3e50;
-        }
-        header {
-            text-align: center;
-            padding: 25px;
-            background: linear-gradient(135deg, #2c3e50, #1a252f);
-            color: white;
-            border-radius: 12px 12px 0 0;
-            margin-bottom: 20px;
             position: relative;
         }
-        .logo {
-            width: 80px;
-            height: 80px;
-            background: #fff;
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 10px 30px var(--shadow);
+            border-radius: 12px;
+            border: 2px solid var(--primary);
+            color: var(--text);
+            backdrop-filter: blur(5px);
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary), #1a252f);
+            color: var(--white);
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 30px;
+            position: relative;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            object-fit: cover;
+            border: 4px solid var(--white);
+            box-shadow: 0 5px 20px var(--shadow);
+            margin: 0 auto 20px;
         }
-        .logo img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
+
         h1 {
             margin: 0;
-            font-size: 2.2em;
+            font-size: 2.8em;
             letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 6px var(--shadow);
+            font-weight: bold;
         }
+
+        .subtitle {
+            font-size: 1.2em;
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            text-shadow: 1px 1px 3px var(--shadow);
+        }
+
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            border-left: 6px solid var(--secondary);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
         h2 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
             padding-bottom: 5px;
             margin-top: 30px;
             display: flex;
             align-items: center;
             gap: 10px;
+            text-shadow: 1px 1px 2px var(--shadow);
         }
+
         h2::before {
-            content: "🏛️";
+            content: "💼";
             font-size: 1.3em;
         }
 
-        /* Cadre pentru subiecte */
-        .topic-card {
-            margin: 25px 0;
-            padding: 20px;
-            background: #fff;
-            border-left: 6px solid #3498db;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-        .topic-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-        }
-        .topic-title {
-            font-size: 1.4em;
-            color: #2c3e50;
-            margin: 0 0 15px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .topic-title::before {
-            content: "⚖️";
-            font-size: 1.2em;
-            color: #e74c3c;
-        }
-
-        /* Posturi */
-        .post {
-            padding: 15px;
+        p, ul {
+            line-height: 1.7;
             margin: 15px 0;
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-            border-radius: 8px;
-            position: relative;
-            transition: background 0.2s;
-        }
-        .post:hover {
-            background: #eaf2f8;
-        }
-        .post-author {
-            font-weight: bold;
-            color: #2c3e50;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .post-date {
-            font-size: 0.85em;
-            color: #7f8c8d;
-            margin-top: 5px;
-        }
-        .like-btn {
-            background: #e74c3c;
-            color: white;
-            border: none;
-            padding: 5px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9em;
-            margin-left: 10px;
-            transition: background 0.2s;
-        }
-        .like-btn:hover {
-            background: #c0392b;
-        }
-        .like-count {
-            margin-left: 5px;
-            font-weight: bold;
         }
 
-        /* Formular */
-        .form-container {
-            margin-top: 30px;
-            padding: 25px;
-            background: rgba(236, 240, 241, 0.8);
-            border-radius: 10px;
-            border: 1px solid #bdc3c7;
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+        ul {
+            padding-left: 20px;
         }
-        input, textarea, button {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 16px;
-            box-sizing: border-box;
-            transition: border 0.2s;
+
+        li {
+            margin: 5px 0;
         }
-        input:focus, textarea:focus {
-            border-color: #3498db;
-            outline: none;
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
         }
-        button {
-            background: #3498db;
-            color: white;
-            cursor: pointer;
-            border: none;
-            font-weight: bold;
-            padding: 12px;
+
+        .skill-tag {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
             transition: background 0.2s;
         }
-        button:hover {
+
+        .skill-tag:hover {
             background: #2980b9;
         }
 
-        /* Reguli */
-        .rules {
-            margin-top: 25px;
-            padding: 15px;
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 14px;
-            line-height: 1.6;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-        .rules strong {
-            color: #e74c3c;
-            font-weight: bold;
-        }
-
-        /* Secțiune Valea Jiului */
-        .valley-section {
-            margin: 30px 0;
-            padding: 25px;
-            background: #fff;
-            border-left: 6px solid #e74c3c;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
-        .valley-title {
-            font-size: 1.5em;
-            color: #e74c3c;
-            margin: 0 0 15px 0;
+        .languages {
             display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .valley-title::before {
-            content: "⛏️";
-            font-size: 1.3em;
-        }
-        .valley-content {
-            line-height: 1.7;
-        }
-        .valley-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin: 15px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .action-call {
-            background: #f8f9fa;
-            padding: 15px;
-            border-left: 4px solid #3498db;
-            border-radius: 8px;
-            margin-top: 20px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        /* Primari și Candidați */
-        .leaders-section {
-            margin: 30px 0;
-            padding: 25px;
-            background: #fff;
-            border-left: 6px solid #9b59b6;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
-        .leaders-title {
-            font-size: 1.5em;
-            color: #9b59b6;
-            margin: 0 0 15px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .leaders-title::before {
-            content: "👥";
-            font-size: 1.3em;
-        }
-        .leader-card {
-            display: flex;
-            align-items: flex-start;
             gap: 15px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            margin: 10px 0;
-            transition: transform 0.2s;
-        }
-        .leader-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .leader-photo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #3498db;
-        }
-        .leader-info {
-            flex: 1;
-        }
-        .leader-name {
-            font-weight: bold;
-            color: #2c3e50;
-            margin: 0 0 5px 0;
-        }
-        .leader-role {
-            font-size: 0.9em;
-            color: #7f8c8d;
-            margin: 0 0 5px 0;
-        }
-        .leader-contact {
-            font-size: 0.9em;
-            color: #3498db;
-            margin: 5px 0 0 0;
+            margin: 15px 0;
         }
 
-        /* Buton Trimite Propunere */
-        .proposal-btn {
-            display: block;
-            width: 100%;
-            background: #9b59b6;
-            color: white;
-            border: none;
-            padding: 12px;
-            margin: 20px 0;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            text-align: center;
+        .language {
+            background: #e74c3c;
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
             transition: background 0.2s;
         }
-        .proposal-btn:hover {
-            background: #8e44ad;
+
+        .language:hover {
+            background: #c0392b;
         }
 
-        /* Populație */
-        .population-section {
-            margin: 30px 0;
-            padding: 25px;
-            background: #fff;
-            border-left: 6px solid #e67e22;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
-        .population-title {
-            font-size: 1.5em;
-            color: #e67e22;
-            margin: 0 0 15px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .population-title::before {
-            content: "👨‍👩‍👧‍👦";
-            font-size: 1.3em;
-        }
-        .population-content {
-            line-height: 1.7;
-        }
-
-        /* Articol Ciobanu Alexandru */
-        .ciobanu-section {
-            margin: 30px 0;
-            padding: 25px;
-            background: #fff;
-            border-left: 6px solid #27ae60;
-            border-radius: 10px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
-        .ciobanu-title {
-            font-size: 1.5em;
-            color: #27ae60;
-            margin: 0 0 15px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .ciobanu-title::before {
-            content: "⚖️";
-            font-size: 1.3em;
-        }
-        .ciobanu-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
+        .button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 12px 25px;
+            margin: 10px 5px;
             border-radius: 8px;
-            margin: 15px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .ciobanu-content {
-            line-height: 1.7;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 3px 8px var(--shadow);
         }
 
-        /* Fundal Justitie */
-        .justice-bg {
-            background: url('https://images.unsplash.com/photo-1589758094783-6a235e92068d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
-            background-size: cover;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            color: white;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        .button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
         }
-        .justice-bg h3 {
-            color: white;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 5px;
-            margin-top: 0;
+
+        .button.secondary {
+            background: var(--secondary);
+        }
+
+        .button.secondary:hover {
+            background: #2980b9;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 2px 6px var(--shadow);
+        }
+
+        .contact-info h3 {
+            color: var(--primary);
+            margin: 0 0 10px 0;
         }
 
         /* Responsiv */
         @media (max-width: 768px) {
             .container {
-                margin: 10px;
-                padding: 15px;
+                margin: 15px;
+                padding: 20px;
             }
-            h1 { font-size: 1.8em; }
-            .topic-title { font-size: 1.2em; }
-            .post {
-                padding: 12px;
+            h1 { font-size: 2em; }
+            .profile-pic {
+                width: 120px;
+                height: 120px;
             }
-            .leader-card {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .leader-photo {
-                width: 60px;
-                height: 60px;
+            .section {
+                padding: 20px;
             }
         }
     </style>
@@ -414,268 +228,96 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">
-                <img src="https://cdn-icons-png.flaticon.com/512/2963/2963875.png" alt="Logo">
-            </div>
-            <h1>🏛️ Forum Politic — Ciobanu Alexandru & Viitorul Valea Jiului</h1>
-            <p>Justiție. Minerit. Viitor. Vocea ta contează.</p>
+            <img src="https://via.placeholder.com/150?text=Cosmin+Croitoru" alt="Croitoru Cosmin" class="profile-pic">
+            <h1>CROITORU COSMIN</h1>
+            <div class="subtitle">Profesionalism • Carismă • Rezultate</div>
         </header>
 
-        <!-- Subiect 1: Educație -->
-        <div class="topic-card" id="topic-edu">
-            <h2>Educația în România</h2>
-            <div class="posts-list" id="edu-posts">
-                <div class="post">
-                    <div class="post-author">Ana Popescu <button class="like-btn" onclick="likePost(this)">👍 <span class="like-count">0</span></button></div>
-                    Trebuie să investim în profesori, nu doar în clădiri. Un profesor motivat = elevi inspirați.
-                    <div class="post-date">Postat azi, 14:30</div>
-                </div>
+        <div class="section">
+            <h2>📌 Despre Mine</h2>
+            <p>Sunt un profesionist dinamich, cu o experiență diversificată în domenii precum transport, industria alimentară, marketing, publicitate și securitate. Am lucrat în România, Germania și Franța, am avut roluri de responsabilitate, am format echipe și am obținut rezultate concrete. Sunt un tip fotogenic, carismatic, cu abilități excelente de comunicare și adaptare rapidă la noi provocări.</p>
+            <p>Născut în 1991, domiciliat în Vulcan, Hunedoara, am absolvit Colegiul Tehnic Mihai Viteazu (profil tehnic: tehnician în instalații electrice și automatizări). După absolvire, am urmat o carieră internațională, am studiat informatica și publicitatea online, iar acum sunt disponibil pentru o nouă experiență profesională în mediul civil.</p>
+        </div>
+
+        <div class="section">
+            <h2>💼 Experiență Profesională</h2>
+            <ul>
+                <li><strong>2024 – Prezent</strong> — Marketing & Publicitate | <em>Artsma Invest S.R.L., Radio Romania, Tattoo.TV</em><br>
+                    Operator photo & video la evenimente naționale (Convenția Internațională Tattoo Bucharest), realizare podcast-uri cu influenceri, promovare afaceri (restaurante, baruri, locații publice).</li>
+                <li><strong>2024</strong> — Casier | <em>Profi</em><br>
+                    Activitate comercială, servicii clienți, gestiune cash.</li>
+                <li><strong>2017 – 2024</strong> — Operator în Abator / Calitate Carni | <em>France</em><br>
+                    Lucrul cu animale ovine, bovine, porcine și sălbatice. Studiu calitate carne, igiena, formare angajați. Accident de muncă — reeducare 3 ani.</li>
+                <li><strong>2015 – 2016</strong> — Sofer Transport | <em>Rac-Transport, Germany</em><br>
+                    Transport piese și prototipuri pentru Mercedes, Porsche, BMW — masina 3,5T.</li>
+                <li><strong>2011 – 2013</strong> — Sofer & Testare Auto | <em>AutoTehnic.Srl, Arad</em><br>
+                    Sofer persoanal al deputatului Eusebiu Pistru, testare și verificare autoturisme noi (Range Rover, Hyundai, Ford).</li>
+                <li><strong>2011</strong> — Barman | <em>Arad</em><br>
+                    Primul job după școală — dezvoltare abilități sociale, comunicare, serviciu clienți.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Educație & Certificări</h2>
+            <ul>
+                <li><strong>2007 – 2011</strong> — Colegiul Tehnic Mihai Viteazu, Vulcan<br>
+                    Profil tehnic: Tehnician în instalații electrice și automatizări.</li>
+                <li><strong>2020</strong> — Diploma Microsoft Word & Excel | <em>Ficus Lyon, France</em></li>
+                <li><strong>2021</strong> — Diploma Publicitate Online | <em>CertiMedia Paris, France</em><br>
+                    Cum creeăm o publicitate de calitate și recunoaștem una în mediul online.</li>
+                <li><strong>2024</strong> — Inrolare în Armata Română | <em>UM01047 Batalionul Neagoe Basarab 26 Infanterie Scorpionii Rosii</em><br>
+                    Soldat Gradat Profesionist (SGP) — activitate scurtă din motive personale.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🛠️ Abilități & Competențe</h2>
+            <div class="skills">
+                <span class="skill-tag">Microsoft Office (Word, Excel)</span>
+                <span class="skill-tag">Publicitate Online</span>
+                <span class="skill-tag">Marketing & Promovare</span>
+                <span class="skill-tag">Comunicare & Relații Interpersonale</span>
+                <span class="skill-tag">Logistică & Transport</span>
+                <span class="skill-tag">Securitate & Igienă</span>
+                <span class="skill-tag">Gestiune Echipă</span>
+                <span class="skill-tag">Adaptabilitate</span>
+                <span class="skill-tag">Fotografie & Video</span>
+                <span class="skill-tag">Podcast & Media</span>
             </div>
         </div>
 
-        <!-- Subiect 2: Justiție -->
-        <div class="topic-card" id="topic-just">
-            <h2>Justiția Independentă</h2>
-            <div class="posts-list" id="just-posts">
-                <div class="post">
-                    <div class="post-author">Mihai Ionescu <button class="like-btn" onclick="likePost(this)">👍 <span class="like-count">0</span></button></div>
-                    Nu putem avea democrație dacă judecătorii sunt controlați de politicieni. Independența e esențială.
-                    <div class="post-date">Postat ieri, 09:15</div>
-                </div>
+        <div class="section">
+            <h2>🌍 Limbi Străine</h2>
+            <div class="languages">
+                <span class="language">Franțuză</span>
+                <span class="language">Spaniolă</span>
+                <span class="language">Engleză</span>
             </div>
+            <p>Fluent în vorbire și scriere — am lucrat în mediul francophone și anglofon.</p>
         </div>
 
-        <!-- Subiect 3: Economie -->
-        <div class="topic-card" id="topic-econ">
-            <h2>Economia și Impozitele</h2>
-            <div class="posts-list" id="econ-posts">
-                <div class="post">
-                    <div class="post-author">Elena Georgescu <button class="like-btn" onclick="likePost(this)">👍 <span class="like-count">0</span></button></div>
-                    Impozitele ar trebui reduse pentru micii antreprenori. Sunt motorul economiei reale.
-                    <div class="post-date">Postat 2 zile în urmă, 18:45</div>
-                </div>
-            </div>
+        <div class="section">
+            <h2>📸 Imagine & Profil</h2>
+            <p>Sunt un tip fotogenic și carismatic — pot fi folosit în campanii publicitare, evenimente, promoții. Am experiență în prezența în fața camerei, interviuri, prezentări.</p>
+            <p>Am un profil puternic — profesionalism, integritate, rezultate. Sunt dispus să învăț continuu, să mă adaptez și să aduc valoare oricărei echipe.</p>
         </div>
 
-        <!-- NOU: Articol Ciobanu Alexandru -->
-        <div class="ciobanu-section">
-            <h2 class="ciobanu-title">⚖️ Ciobanu Alexandru — Avocat, Tânăr, Viitor Primar al Vulcanului</h2>
-            <div class="ciobanu-content">
-                <p><strong>Ciobanu Alexandru</strong> este unul dintre cei mai promițători tineri din Valea Jiului — avocat, cu o carieră construită pe principii de justiție, integritate și respect pentru lege.</p>
-
-                <img src="https://via.placeholder.com/800x400?text=Ciobanu+Alexandru+-+Viitor+Primar+Vulcan" alt="Ciobanu Alexandru" class="ciobanu-image">
-
-                <h3>Caracter și Dorințe Puternice</h3>
-                <p>Alexandru a demonstrat încă de la început că nu se teme de bătălii politice — chiar dacă sunt grele. A dat dovadă de putere în politica locală, prin propuneri concrete, transparență și implicare directă în problemele comunității.</p>
-
-                <h3>Susținut și cu Șanse Reale</h3>
-                <p>Este susținut de o parte din populația locală, dar și de organizații civice care cred în schimbare. Are șanse reale să câștige alegerile — nu doar pentru că are idei, ci pentru că are curaj.</p>
-
-                <div class="justice-bg">
-                    <h3>⚖️ Fundal de Justiție — Procesul Politic Simbolic</h3>
-                    <p>Imaginea de fundal reprezintă un moment istoric — procesul care a dus la schimbarea unei conduceri corupte. Exact asta vrem și noi: ca justiția să prevaleze, iar cei care fură banii publici să fie dați jos.</p>
-                </div>
-
-                <div class="action-call">
-                    🔥 <strong>Acțiune imediată:</strong> Sprijină-l pe Ciobanu Alexandru — scrie o opinie în secțiunea „Justiție” sau „Economie” — și propune o soluție concretă pentru Vulcan!
-                </div>
+        <div class="section">
+            <h2>📩 Contact & CV</h2>
+            <div class="contact-info">
+                <h3>Te aștept să mă contactezi!</h3>
+                <p>Email: <a href="mailto:cosmin.croitoru@example.com" style="color: var(--accent);">cosmin.croitoru@example.com</a></p>
+                <p>Telefon: +40 7XX XXX XXX</p>
+                <p>LinkedIn: <a href="#" style="color: var(--accent);">linkedin.com/in/cosmincroitoru</a></p>
             </div>
-        </div>
-
-        <!-- NOU: Secțiune Tineretul din Valea Jiului -->
-        <div class="population-section">
-            <h2 class="population-title">👨‍👩‍👧‍👦 Tineretul din Valea Jiului — Obligat să Plece, Dar Doritor să Rămână</h2>
-            <div class="population-content">
-                <p><strong>Tinerii din Valea Jiului</strong> sunt forța viitoare — dar astăzi sunt obligați să plece pentru a se dezvolta în muncă. Nu pentru că nu vor să rămână — ci pentru că nu au locuri de muncă, nu au proiecte, nu au șanse.</p>
-
-                <p>👉 <strong>Dorința lor nu este aceasta.</strong> Ei vor să rămână — să construiască, să inoveze, să redea viață zonei.</p>
-
-                <h3>❓ Ce soluție am putea găsi?</h3>
-                <ul>
-                    <li>Creăm proiecte locale de antreprenoriat — cu sprijin financiar și tehnic</li>
-                    <li>Construim centre de educație tehnică — legate de minerit, turism, IT</li>
-                    <li>Implicăm tinerii în deciziile locale — nu doar ca spectatorii, ci ca actori</li>
-                    <li>Dăm jos conducerea care nu se oprește din a fura banii publici — și o înlocuim cu cei tineri, care doresc să dea o șansă acestei zone</li>
-                </ul>
-
-                <div class="action-call">
-                    💪 <strong>Este timpul să ne unim — pentru un viitor comun, în care tinerii sunt la putere, nu la plecare.</strong>
-                </div>
-            </div>
-        </div>
-
-        <!-- NOU: Secțiune Primari și Candidați -->
-        <div class="leaders-section">
-            <h2 class="leaders-title">👥 Primari și Candidați din Valea Jiului</h2>
-            <div class="leader-card">
-                <img src="https://via.placeholder.com/80" alt="Primar" class="leader-photo">
-                <div class="leader-info">
-                    <div class="leader-name">Ion Popescu</div>
-                    <div class="leader-role">Primar Petroșani</div>
-                    <div class="leader-contact">📧 ion.popescu@petrosani.ro | 📞 0254-123456</div>
-                    <p>„Vrem să transformăm Petroșani într-un centru de turism industrial și educație tehnică.”</p>
-                </div>
-            </div>
-            <div class="leader-card">
-                <img src="https://via.placeholder.com/80" alt="Primar" class="leader-photo">
-                <div class="leader-info">
-                    <div class="leader-name">Maria Ionescu</div>
-                    <div class="leader-role">Primar Lupeni</div>
-                    <div class="leader-contact">📧 maria.ionescu@lupeni.ro | 📞 0254-654321</div>
-                    <p>„Ne concentrăm pe reconversia minelor în spații culturale și educaționale.”</p>
-                </div>
-            </div>
-            <div class="leader-card">
-                <img src="https://via.placeholder.com/80" alt="Candidat" class="leader-photo">
-                <div class="leader-info">
-                    <div class="leader-name">Ciobanu Alexandru</div>
-                    <div class="leader-role">Candidat la Primăria Vulcan</div>
-                    <div class="leader-contact">📧 alex.ciobanu@vulcan.ro | 📞 0254-789012</div>
-                    <p>„Vrem să aducem înapoi minele — nu ca locuri de muncă, ci ca simboluri ale identității noastre. Și să dăm putere tinerilor.”</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- NOU: Buton Trimite Propunere -->
-        <button class="proposal-btn" onclick="showProposalForm()">📩 Trimite o propunere către primărie</button>
-
-        <!-- Formular Propunere -->
-        <div id="proposal-form" style="display: none; margin-top: 20px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
-            <h3>Trimite o propunere către primărie</h3>
-            <input type="text" id="proposal-name" placeholder="Numele tău" required>
-            <input type="text" id="proposal-email" placeholder="Emailul tău" required>
-            <select id="proposal-town">
-                <option value="">Alege orașul</option>
-                <option value="petrosani">Petroșani</option>
-                <option value="lupeni">Lupeni</option>
-                <option value="vulcan">Vulcan</option>
-                <option value="petrosani">Aninoasa</option>
-                <option value="petrosani">Uricani</option>
-            </select>
-            <textarea id="proposal-text" placeholder="Scrie propunerea ta... (min. 100 de caractere)" rows="5" required></textarea>
-            <button onclick="submitProposal()">Trimite Propunerea</button>
-            <button onclick="hideProposalForm()" style="background: #95a5a6; margin-left: 10px;">Anulează</button>
-        </div>
-
-        <!-- Formular pentru adăugare opinie -->
-        <div class="form-container">
-            <h3>Adaugă o opinie</h3>
-            <input type="text" id="name" placeholder="Numele tău" required>
-            <div class="topic-selector">
-                <label for="topic">Alege subiectul:</label>
-                <select id="topic">
-                    <option value="edu">Educația în România</option>
-                    <option value="just">Justiția Independentă</option>
-                    <option value="econ">Economia și Impozitele</option>
-                </select>
-            </div>
-            <textarea id="opinion" placeholder="Scrie opinia ta... (min. 50 de caractere)" rows="5" required></textarea>
-            <button onclick="addOpinion()">Postează</button>
-        </div>
-
-        <div class="rules">
-            <strong>Reguli de participare:</strong><br>
-            • Respectă toți participanții — chiar dacă nu ești de acord<br>
-            • Nu folosi limbaj vulgar, amenințări sau mesaje de ură<br>
-            • Nu postează linkuri externe fără motiv valid<br>
-            • Opiniile sunt moderate după publicare (dacă e nevoie)<br>
-            • Fii concis și constructiv — discuția e mai importantă decât „câștigarea” ei.<br>
-            • Toate opiniile sunt exprimate în cadrul legal — nu încălci legile României.
+            <a href="#" class="button">📥 Descarcă CV-ul meu</a>
+            <a href="#" class="button secondary">📧 Trimite-mi un mesaj</a>
         </div>
     </div>
 
     <script>
-        function addOpinion() {
-            const name = document.getElementById('name').value.trim();
-            const topic = document.getElementById('topic').value;
-            const opinion = document.getElementById('opinion').value.trim();
-
-            if (name === '' || opinion === '') {
-                alert("Te rugăm completează toate câmpurile.");
-                return;
-            }
-
-            if (opinion.length < 50) {
-                alert("Opinia trebuie să aibă cel puțin 50 de caractere.");
-                return;
-            }
-
-            // Creează postul
-            const post = document.createElement('div');
-            post.className = 'post';
-            const now = new Date();
-            const dateStr = now.toLocaleString('ro-RO');
-
-            post.innerHTML = `
-                <div class="post-author">${escapeHtml(name)} <button class="like-btn" onclick="likePost(this)">👍 <span class="like-count">0</span></button></div>
-                ${escapeHtml(opinion)}
-                <div class="post-date">Postat ${dateStr}</div>
-            `;
-
-            // Adaugă postul în secțiunea corespunzătoare
-            const targetContainer = document.getElementById(`${topic}-posts`);
-            targetContainer.prepend(post);
-
-            // Resetează formularul
-            document.getElementById('name').value = '';
-            document.getElementById('opinion').value = '';
-
-            alert("Mulțumim pentru contribuția ta! Opinia ta a fost adăugată.");
-        }
-
-        function likePost(button) {
-            const countSpan = button.querySelector('.like-count');
-            let currentLikes = parseInt(countSpan.textContent);
-            currentLikes++;
-            countSpan.textContent = currentLikes;
-            button.style.background = '#c0392b';
-            button.style.transform = 'scale(1.1)';
-            setTimeout(() => {
-                button.style.transform = 'scale(1)';
-            }, 200);
-        }
-
-        function showProposalForm() {
-            document.getElementById('proposal-form').style.display = 'block';
-        }
-
-        function hideProposalForm() {
-            document.getElementById('proposal-form').style.display = 'none';
-        }
-
-        function submitProposal() {
-            const name = document.getElementById('proposal-name').value.trim();
-            const email = document.getElementById('proposal-email').value.trim();
-            const town = document.getElementById('proposal-town').value;
-            const text = document.getElementById('proposal-text').value.trim();
-
-            if (name === '' || email === '' || town === '' || text === '') {
-                alert("Te rugăm completează toate câmpurile.");
-                return;
-            }
-
-            if (text.length < 100) {
-                alert("Propunerea trebuie să aibă cel puțin 100 de caractere.");
-                return;
-            }
-
-            // Aici poți adăuga funcționalitatea de trimitere email (mai târziu, cu backend)
-            alert(`Mulțumim, ${name}! Propunerea ta a fost trimisă către primăria din ${town}.`);
-
-            // Resetează formularul
-            document.getElementById('proposal-name').value = '';
-            document.getElementById('proposal-email').value = '';
-            document.getElementById('proposal-town').value = '';
-            document.getElementById('proposal-text').value = '';
-
-            hideProposalForm();
-        }
-
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
+        // Poți adăuga funcționalități mai târziu (ex: descărcare CV, formular contact)
+        console.log("Portofoliu Croitoru Cosmin — gata de utilizare!");
     </script>
 </body>
 </html>
